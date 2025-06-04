@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useSelector } from "react-redux";
+
+import blurry_bg from "./assets/blurry-bg.png";
+import Header from "./components/Header";
+import CustomerCreation from "./features/customers/CustomerCreation";
+import Account from "./features/accounts/Account";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { fullName } = useSelector((store) => store.customer);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <img
+        src={blurry_bg}
+        alt=""
+        className="fixed inset-0 -z-20 h-full w-full"
+      />
+      <div className="fixed inset-0 -z-10 h-full w-full bg-black/75"></div>
+      <Header />
+      <CustomerCreation />
+      {fullName && <Account />}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
