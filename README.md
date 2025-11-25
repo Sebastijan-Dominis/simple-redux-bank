@@ -12,6 +12,8 @@ A minimal demo banking app built with React, TypeScript, Vite and Redux Toolkit.
 - [Scripts](#scripts)
 - [Screenshots](#screenshots)
 - [License](#license)
+- [Contributing](#contributing)
+- [Author & Contact](#author--contact)
 
 ## Overview
 
@@ -96,18 +98,21 @@ This structure keeps features grouped, making it easy to scale and reason about 
 
 ## Screenshots
 
+### Account creation
 ![Account creation](screenshots/redux-bank-1.png)
 
+### Account management
 ![Account management](screenshots/redux-bank-2.png)
 
 ## License
 
 - See the `LICENSE` file included in this repository.
 
-**Contributing**
+## Contributing
 
 - Contributions are welcome. Open an issue or send a PR with a clear description of the change.
 
-**Contact / Author**
+## Author & Contact
 
-- Author: repository owner (see repository metadata)
+- Author: Sebastijan Dominis
+- Contact: sebastijan.dominis99@gmail.com
