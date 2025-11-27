@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useStoreSelector } from "./features/hooks";
 
 import blurry_bg from "./assets/blurry-bg.png";
 import Header from "./components/Header";
@@ -6,7 +6,7 @@ import CustomerCreation from "./features/customers/CustomerCreation";
 import Account from "./features/accounts/Account";
 
 function App() {
-  const { fullName } = useSelector((store) => store.customer);
+  const { fullName } = useStoreSelector((store) => store.customer);
 
   return (
     <>
